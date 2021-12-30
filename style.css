@@ -129,6 +129,13 @@
     border:none;
 }
 
+.button button:hover{
+    background-color: #799bf0;
+    cursor: pointer;
+    transition: .3s ease-out;
+}
+
+
 
 
 
