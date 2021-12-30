@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Ping coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="main">
+    <div class="main-inner">
+
+      <div class="logo">
+        <img src="images/logo.svg" alt="logo">
+      </div>
+
+      <div class="launching-content">
+        <h1> We are launching <span>soon!</span></h1>
+        <p>Subscribe and get notified</p>
+      </div>
+
+
+      <div class="email-main">
+
+        <div class="email-input">
+          <input type="email" placeholder="example@gmail.com" id="email">
+
+          <div class="button">
+            <button onclick="validate()">Notify me</button>
+          </div>
+        </div>
+
+
+        <div class="error">
+          <p id="error"></p>
+        </div>
+
+
+      </div>
+
+      <div class="dashboard">
+        <img src="images/illustration-dashboard.png" alt="dashboard">
+      </div>
+
+
+      <div class="social-links">
+        <div class="social-links-inner">
+          <a href=" "><i class="fab fa-facebook social-icon"></i></a>
+          <a href=" "> <i class="fab fa-twitter  social-icon"></i></a>
+          <a href=" "><i class="fab fa-instagram social-icon"></i></a>
+        </div>
+      </div>
+
+
+
+      <div class="footer">
+
+        &copy; Copyright Ping. All rights reserved.<br>
+
+        <footer>
+          <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Rankush</a>.
+          </p>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://kit.fontawesome.com/f1edc9cc6f.js" crossorigin="anonymous" defer></script>
+
+  <script src="script.js" type="text/js"></script>
+
+  <script>
+    var email = document.getElementById("email");
+    var error = document.getElementById("error").value;
+
+    function validate() {
+
+      if (email.value == '' || email.value == null) {
+        document.getElementById("email").style.borderColor = "red";
+        document.getElementById('error').innerHTML = "Please enter a valid email address";
+
+
+      }
+      else if (!email.value.includes('@gmail.com')) {
+        document.getElementById('email').style.borderColor = "red";
+        document.getElementById('error').innerHTML = "Please enter a valid email address";
+      }
+
+      else {
+
+        document.getElementById("email").style.borderColor = "#4e71aa";
+        document.getElementById("error").style.color = "green";
+
+        document.getElementById('error').innerHTML = "Thanks for submission";
+
+
+      }
+    }
+
+  </script>
+</body>
+
+</html>
